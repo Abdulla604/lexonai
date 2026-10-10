@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
+}
+
+/* Sarlavhaning o'ngdan chapga qarab sirg'alib chiqish animatsiyasi */
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-right {
+  animation: slideFromRight 0.8s ease-out forwards;
+}
+
+/* Orqa fondagi yuridik belgilarning sekin suzib yurish animatsiyasi */
+@keyframes floatLaw {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.floating-law-icon {
+  animation: floatLaw 6s ease-in-out infinite;
+}
